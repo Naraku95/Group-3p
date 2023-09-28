@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nike Project</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			font-family:'Noto Sans',sans-serif;
+			background: #333;
+		}
+		.body img{
+			transform: rotate(-25deg);
+			width: 60%;
+			height: 250%;
+			position: absolute;
+			filter:drop-shadow(30px 45px 40px #161616);
+			top: -90%;
+
+		}
+		a:hover{
+			background: black;
+			color: #ccee66;
+		}
+		nav{
+			color: #fff;
+			z-index: 99;
+			position: relative;
+		}
+		nav a,header a{
+			color: #fff;
+			text-decoration: none;
+
+		}
+		nav.container{
+			max-width: 1150px;
+			padding: 16px 32px;
+			margin: 0 auto;
+
+		}
+		nav.container>div{
+			display: grid;
+			grid-template-columns: 1fr 6fr;
+			align-items: center;
+		}
+		nav.menu,nav form,.footer{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+		}
+		nav ul{
+			list-style-type: none;
+			padding: 0;
+			display: inline-block;
+
+		}
+		nav ul li{
+			display: inline-block;
+			margin: 0 8px;
+
+		}
+		nav ul a{
+			font-size: 13px;
+			text-transform: uppercase;
+		}
+		nav form{
+			margin-right: 32px;
+
+		} 
+		nav form input{
+			background: transparent;
+			color: #fff;
+			width: 192;
+			padding: 8px 16px;
+			border: none;
+			outline: none;
+
+
+		}
+		nav form input::placeholder{
+			color: #fff;
+
+
+		}
+		.logo{
+			width: 64px;
+			display: inline-block;
+		}
+		.nav-btn{
+			background: rgba(255,255,255,0.3);
+			color: #fff;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			border:none;
+			outline: none;
+			cursor: pointer;
+			/*transition: 0.3s;*/
+			font-size: 16px;
+
+		}
+		.nav-btn:hover{
+			background: rgba(255,255,255,0.6);
+
+		}
+		nav.container.menu-btn{
+			display: none;
+
+		}
+		header{
+			height: 100vh;
+			background: #090909;
+			position: relative;
+			overflow: hidden;
+			color: white;
+		}
+		header::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -640px;
+			background: linear-gradient(45deg,#ccee66,#6e9623);
+			width:100%;
+			height: 120%;
+			transform: rotate(70deg);
+			z-index: 0;
+		}
+		header::after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: rgba(0,0,0,0.2);
+			font-size: 272px;
+			font-weight: 700;
+			z-index: 0;
+		}
+		.body{
+			display: grid;
+			justify-content: space-around;
+			align-content: center;
+			grid-template-columns: 2fr 3fr;
+			grid-gap: 32px;
+			/*height: 55%;*/
+			position: relative;
+			z-index: 1;
+			max-width: 1250px;
+			margin: 0 auto;
+			padding: 0 48px;
+			float: left;
+
+
+		}
+		header h2{
+			font-size: 30px;
+		}
+		.body h1{
+			font-size: 56px;
+			margin: 8px 0;
+			/*height: 5%;*/
+		}
+		.body h4{
+			font-size: 24px;
+			margin: 8px 0;
+			/*height: 5%;*/
+		}
+		.body p{
+			letter-spacing: 2px;
+			line-height: 25px;
+			font-size: 14px;
+			margin: 32px 0 48px 0;
+			max-width: 720px;
+			/*height: 25%;*/
+		}
+		.btn{
+			padding: 11px 24px;
+			background: #a3be52;
+			border-radius: 48px;
+			letter-spacing: 1px;
+			font-size: 16px;
+
+		}
+		.btn:hover{
+			background: #6e9623;
+
+		}
+		.body > div:nth-child(2){
+			display: flex;justify-content: flex-end;
+			align-items: center;
+		}
+		.body .fas{
+			color: #fcc204;
+		}
+		.footer{
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 5px;
+			position: absolute;
+			top: 10%;
+			left: 1100px;
+
+
+			
+			
+		}
+		.footer a{
+			margin: 0 6px;
+			font-size: 19px;
+		}
+		*{
+			box-sizing: border-box;
+		}
+		
+
+		
+
+		/*.footer .play-icon{
+			border: 3px #fff solid;
+			border-radius: 50%;
+			width: 3em;
+			height: 3em;
+			text-align: center;
+			line-height: 3em;
+			font-size: 1.3em;
+			box-shadow: 0px 0px 15px #fff;
+			margin-right: 0.8em;
+			cursor: pointer;
+
+		}
+		.footer .play-icon:hover{
+			background: rgba(255,255,255,0.5);
+			box-shadow: 0px 0px 0px transparent;
+*/
+		}
+		/*@media screen and (max-width: 1000px){
+			nav .container{
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+			nav .container > div{
+				grid-template-columns: 3fr;
+			}
+			nav.menu{
+				flex-direction: column;
+				align-items: flex-start;
+				height: 0;
+				overflow: hidden;
+			}
+		}*/
+
+		/*.body img{
+			width: 200px;
+			height: 100px;
+		}*/
+
+	</style>
+</head>
+<body>
+	<header>
+		<h2>Nike</h2>
+		<nav>
+			<div class="container">
+				<div>
+					<img src="Nike.jpeg" alt="Logo" class="logo" />
+					<div class="menu">
+						<ul>
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li>	
+								<a href="Product1.html">Products</a>
+							</li>
+							<!-- <li>
+								<a href="#">Iconic</a>
+							</li> -->
+							<li>
+								<a href="payment.html">Payment</a>
+							</li>
+							<li>
+								<a href="Help.html">Help</a>
+							</li>
+							<li>
+								<a href="sign up.html">Sign in</a>
+							</li>
+						</ul>
+						<form>
+							<!-- <div class="search-icon">
+								<a href="#" class="fa fa-search"></a> -->
+							
+							<input 
+							type="text" 
+							class="search" 
+							placeholder="Search..."
+							/>
+							<!-- <button class="nav-btn"> -->
+								<!-- <a href="#" class="fa fa-cart-plus"></a> -->
+							<!-- </button> -->
+						</form>
+						
+						<!-- <nav class="navbar navbar-light bg-light">
+  							<div class="container-fluid">
+    							<form class="d-flex">
+      								<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      								<button class="btn btn-outline-success" type="submit">Search</button>
+    							</form>
+  							</div>
+						</nav> -->
+					</div>
+				</div>
+				<!-- <div class="menu-btn">
+					<a href="#" class="fa fa-menu"></a>
+				</div> -->
+				
+			</div>
+		</nav>
+		<div class="body">
+			<div>
+				<h4>$47.97</h4>
+				<h1>Nike SuperRep Go</h1>
+				<div class="rating">
+					<a href="#" class="fa fa-star"></a>
+					<a href="#" class="fa fa-star"></a>
+					<a href="#" class="fa fa-star"></a>
+					<a href="#" class="fa fa-star"></a>
+					<a href="#" class="fa fa-star"></a>
+
+					
+				</div>
+				<p>
+					The Nike SuperRep Go combines comfortable foam cushioning,flexibility and support to get you moving in circuit-based fitness classes or while streaming workouts at home.
+				</p>
+				<a href="payment.html" class="btn">Add to Cart</a>
+				
+			</div>
+			<div >
+				<img src="super.png" alt="Nike SuperRep Go" />
+			</div>
+			
+		</div>
+		
+			
+		<div class="footer">
+			<!-- Add icon library -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Add font awesome icons -->
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-instagram"></a>
+			
+<!-- 			</div><div class="watch">
+				<div class="play-icon">
+					<a href="#" class="fa fa-play"></a>
+				</div>
+				<h3>Preview</h3> -->
+		</div>
+
+		
+	</header>
+
+	<footer>
+		<p>Developed by Khant Zin Hein</p>
+	</footer>	
+
+	
+
+</body>
+</html>

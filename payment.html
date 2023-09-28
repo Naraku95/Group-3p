@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Payment Form</title>
+    <style>
+      nav a{
+      text-decoration: none;
+      float: left;
+      padding: 20px;
+      color: white;
+      }
+      .FF:hover{
+      background: white;
+      color: black;
+      }
+      /*body{
+      margin: 0;
+      padding: 0;
+      }
+      *{
+      box-sizing: border-box;
+      }*/
+      p{
+        color: white;
+        font-size: 23;
+        line-height: 2;
+      }
+      .Bb{
+        color: white;
+      }
+      *{
+        margin: 0;
+        padding: auto;
+        box-sizing: border-box;
+      }
+      @media screen and() 
+      .Logo{
+        width: 100%;
+      }
+      img{
+        padding: 15px;
+        width: 150px;
+        height: 100px;
+        border-radius: 30px;
+      }
+      img:hover{
+        background:steelblue;
+        padding: 10px;
+        transition-duration: 0.5s;
+      }
+      button{
+        background:skyblue;
+        border-radius: 20px;
+        width: 170px;
+      }
+      .hp{
+        padding: 5px;
+        background: steelblue;
+
+      }
+      body{
+        background:url("Nike3.jpeg");
+        width: 100%;
+        height: 20%;
+        background-position: right;
+        background-size: 80% 100%;
+      }
+      .hp{
+        background: steelblue;
+        color: white;
+        padding: 15px;
+        font-size: 15;
+      }
+      footer{
+        float: right;
+      }
+    </style>
+  </head>
+  <!-- <header>
+    <h1>PAYMENT</h1>
+  </header> -->
+  <body>
+    <nav>
+      <div class="container1">
+        <div>
+          <!-- <img src="Nike.jpeg" alt="Logo" class="logo"> -->
+          <div class="menu">
+            <nav>
+              <a href="index.html" class="FF">Home</a>
+              <a href="Product1.html" class="FF">Product</a>
+              <!-- <a href="#">Iconic</a> -->
+              <a href="Help.html" class="FF">Help</a>
+              <a href="sign up.html" class="FF">Sign in</a>
+              <a href="payment.html" class="FF">Payment</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <!-- <a href="Product1.html"><button  class="Rr"><h3>Back</h3></button></a> -->
+    <form  class="Logo">
+      <h1 class="Bb"><u>Payment Form</u></h1>
+      <p>*Required field are followed by*</p>
+      <h2 class="Bb"><u>Contact information</u></h2>
+      <p>Name:<input type="text" name="name" row="2" required=""></p>
+        
+      <p>
+        Gender:
+        Male <input type="radio" name="gender" id="male" required="">
+        Female <input type="radio" name="gender" id="female" required="">
+        </p>
+    <p>Address: <textarea name="address" id="address" rows="1.5" cols="25"></textarea></p>
+     <p>Email: <input type="email" name="email" id="email" value="" row="2" required="" /></p> 
+     <p>Comment: <input type="comment" row="2"/></p>
+    <h2 class="Bb"><u>Payment Information</u></h2>
+    <p>Pay Amount:$$$$
+      
+    </p>
+    <p>Choose card type :</p>
+    <a href="#Number">
+        <button type="submit"><img src="logo1.jpeg"></button>
+        <button type="submit"><img src="logo2.jpeg"></button>
+        <button type="submit"><img src="logo3.jpeg"></button>
+        <button type="submit"><img src="logo4.jpeg"></button>
+        </a>
+    <p class="container" id="Number">
+      Card Number:<input type="number" name="card Number" id="Card Number" required="">
+    </p>
+    <p>
+      Expiration Date: <input type="date" name="exp_date" id="exp_date" required="">
+    </p>
+    <input type="submit" name="" class="hp" value="Pay Now" />
+    </form>
+    <footer>
+      <p>Developed by Sai Heart Han Ohm</p>
+    </footer>
+  </body>
+</html>
